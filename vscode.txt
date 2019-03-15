@@ -1,1 +1,0 @@
-Install VS Code with direct DEB download. 

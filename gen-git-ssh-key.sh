@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Generate SSH key for Git. Use `test-git-ssh-key.sh` 
+# to ensure github connectivity.
+
 ssh-keygen -t rsa -b 4096 -C "roger.pence@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa

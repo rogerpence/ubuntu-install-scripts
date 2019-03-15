@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Install the latest nightly FireFox Dev version. Run this script often! 
+
 # Get the lastest FFDE version number.
 curl -o releases.txt https://download-installer.cdn.mozilla.net/pub/devedition/releases/
 VERSION=$(grep -o '[0-9][0-9]\.[0-9][a-z][0-9]' releases.txt | tail -1)    

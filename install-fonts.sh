@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Install Source Code Pro, Menlo for Powerline, and FiraCode fonts.
+
 mkdir /home/roger/.fonts -p
 
 wget https://github.com/abertsch/Menlo-for-Powerline/raw/master/Menlo%20for%20Powerline.ttf -O Menlo-for-Powerline.ttf
