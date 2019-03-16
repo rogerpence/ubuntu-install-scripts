@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Install Terminator
+# Test Git SSH key
 
-sudo add-apt-repository ppa:gnome-terminator
-sudo apt-get update
-sudo apt-get install terminator 
+ssh -T git@github.com
+
+
 
