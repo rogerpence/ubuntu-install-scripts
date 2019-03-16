@@ -9,4 +9,4 @@ today=`date +%Y-%m-%d.%H:%M:%S`
 
 echo $today
 
-git cm 'refreshed $(today)'
+git cm 'refreshed $today'
