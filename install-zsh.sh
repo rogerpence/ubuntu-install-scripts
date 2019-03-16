@@ -24,21 +24,24 @@ echo This is the "Populate your ~/.zshrc with the configuration recommended..." 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 # Change theme in ~/.zshrc to 'agnoster' (agnoster theme is installed by default)
+sed -i "s/^ZSH_THEME.*$/ZSH_THEME=\"agnoster\"/" ~/.zshrc
 
-# Add this to the bottom of ~/.zshrc to start prompt on newline. 
-# From here:
+# Echo new prompt_end() function to put a newline after listing current folder in the terminal.
 # https://stackoverflow.com/questions/41017917/add-newline-to-oh-my-zsh-theme
+cat >> ~/.zshrc <<EOF
 
-    # prompt_end() {
-    #   if [[ -n $CURRENT_BG ]]; then
-    #       print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
-    #   else
-    #       print -n "%{%k%}"
-    #   fi
+prompt_end() {
+    if [[ -n $CURRENT_BG ]]; then
+        print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+    else
+        print -n "%{%k%}"
+    fi
 
-    #   print -n "%{%f%}"
-    #   CURRENT_BG='' 
+    print -n "%{%f%}"
+    CURRENT_BG='' 
 
-    #   #Adds the new line and ➜ as the start character.
-    #   printf "\n ➜";
-    # }
+    #Adds the new line and ➜ as the start character.
+    printf "\n ➜";
+}
+EOF
+

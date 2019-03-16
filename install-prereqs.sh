@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 sudo apt-get install curl \
 	zlib1g-dev \
 	build-essential \
@@ -10,5 +12,10 @@ sudo apt-get install curl \
 	libxslt1-dev \
 	libcurl4-openssl-dev \
 	software-properties-common \
-	libffi-dev
-
+	libffi-dev \
+	gcc \
+	libc6-dev \
+	autoconf \
+	automake \
+	xclip \
+	tree \
