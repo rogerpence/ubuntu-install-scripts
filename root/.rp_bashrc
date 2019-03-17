@@ -37,6 +37,9 @@ function doctest() {
     fi
 }
 
+[ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) || 
+    eval $(dircolors -b)
+
 alias chmod770='chmod 770 $(ls -d */)'
 alias lsdir='ls -alhF --color'
 alias treed='tree -d -A -L 6'

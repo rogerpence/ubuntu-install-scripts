@@ -15,6 +15,9 @@ cp ~/.config/Code/User/snippets/*.json ./vscode/snippets
 cp ~/.rp_bashrc ./root
 cp ~/.bashrc ./root
 cp ~/.zshrc ./root
+# See this article on changing attribute-driven terminal colors. 
+# https://unix.stackexchange.com/questions/241726/fix-ls-colors-for-directories-with-777-permission
+cp ~/.dircolors ./root 
 
 # Copy Git files.
 cp ~/.gitconfig ./git 
