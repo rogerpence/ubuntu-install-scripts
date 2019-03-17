@@ -8,7 +8,7 @@ mkdir root -p
 mkdir git -p
 
 # Copy Visual Studio Code settings file. 
-cp ~/.config/Code/User/settings.json ./vscode
+cp ~/.config/Code/User/*.json ./vscode
 cp ~/.config/Code/User/snippets/*.json ./vscode/snippets
 
 # Copy Bash/zsh dot files. 
