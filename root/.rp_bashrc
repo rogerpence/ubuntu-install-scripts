@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+function dev {
+    if [ -x dev ] 
+    #if [ "$1" == "dev" ]
+    then 
+        ./dev "$@"
+    else
+        echo "There isn't a 'dev' file here."
+    fi
+}
+
+function path() {
+    # I found this tip here:
+    # http://www.cyberciti.biz/faq/howto-print-path-variable/
+
+    # IFS is Linux's field separator character. First, the previously-assigned
+    # separator is saved in 'old' and then ':' is assigned as the temporary
+    # separator. printf then obeys that separator and prints each path token
+    # as a separate line (using the "%s\n"). Before ending, the previously-assigned
+    # separator is restored.
+
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH | sort | more
+    IFS=$old
+}
+
+function doctest() {
+    # -eq is for numeric tests
+    # = is for string tests
+    if [[ $1 = "a" ]]
+    then
+        echo a
+    else
+        echo not a
+    fi
+}
+
+alias lsdir='ls -alhF --color'
+alias treed='tree -d -A -L 6'
+#alias fj='ycb -- xsel -b'
