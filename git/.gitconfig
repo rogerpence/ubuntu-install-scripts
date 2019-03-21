@@ -16,3 +16,11 @@
 [core]
 	safecrlf = false
 	editor = code --wait
+[color "status"]
+	changed = white
+	added = yellow
+	untracked = white
+
+[color]
+	diff = auto
+	status = auto

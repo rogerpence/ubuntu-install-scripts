@@ -26,6 +26,8 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+DISABLE_AUTO_TITLE="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
@@ -117,4 +119,12 @@ fi
 if [ -f ~/.rp_bashrc ]; then
     . ~/.rp_bashrc
 fi
+
+case $TERM in
+    xterm*)
+     precmd ()  {
+        print -Pn "\e]0; %24<..<%/\a"
+     }
+     ;;
+esac
 
