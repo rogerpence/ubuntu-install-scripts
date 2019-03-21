@@ -44,3 +44,6 @@ alias chmod770='chmod 770 $(ls -d */)'
 alias lsdir='ls -alhF --color'
 alias treed='tree -d -A -L 6'
 #alias fj='ycb -- xsel -b'
+
+export DORP=104.236.28.208
+
