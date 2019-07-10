@@ -11,5 +11,26 @@
     "terminal.integrated.fontFamily": "Menlo for PowerLine",
     "editor.fontSize": 16,
     "editor.mouseWheelZoom": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "workbench.tree.indent": 28,
+    "breadcrumbs.enabled": true,
+    "[markdown]" : {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80
+    },
+    "workbench.tree.renderIndentGuides": "always",
+    
+    "liveSassCompile.settings.formats":[
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dist/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/dist/css"
+        }
+    ],
+    "editor.cursorBlinking": "expand"
 }
